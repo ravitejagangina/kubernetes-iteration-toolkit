@@ -43,10 +43,15 @@ jobs:
       working-directory: substrate
     - name: Bootstrap-kitctl
       run: |
-            
             cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/cmd/kitctl
-            ls -lta
-            ./kitctl bootstrap ganiredi
+            RANDOM_SUFFIX=$(openssl rand -hex 5)
+            ./kitctl bootstrap kit-github-${RANDOM_SUFFIX}
+    - name: Delete-kitctl
+      run: |
+            cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/cmd/kitctl
+            export KUBECONFIG=/home/runner/.kit/env/kit-github-${RANDOM_SUFFIX}/etc/kubernetes/admin.conf
+            ./kitctl delete kit-github-${RANDOM_SUFFIX}
+            
           
            
    
