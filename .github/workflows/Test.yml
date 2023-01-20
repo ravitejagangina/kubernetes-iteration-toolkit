@@ -44,9 +44,9 @@ jobs:
     - name: bootstrap
       run: |
            echo "Binary location: $(pwd)/substrate/bin/kitctl"
-           cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/bin
+           cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/bin/kitctl
            ls -ltr
-           kitctl bootstrap ganiredi-kitctl
+          
            
    
           
