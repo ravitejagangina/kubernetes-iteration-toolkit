@@ -40,8 +40,12 @@ jobs:
         GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o ./bin/kitctl ./cmd/kitctl/ 
         cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/cmd/kitctl
         go build -v .
-        kitctl bootstrap ganiredi
       working-directory: substrate
+    - name: Bootstrap-kitctl
+      run: |
+            
+            cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/cmd/kitctl
+            ls -lta
           
            
    
