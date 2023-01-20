@@ -44,6 +44,8 @@ jobs:
     - name: Print binary location
       run: |
            echo "Binary location: $(pwd)/substrate/bin/kitctl"
+           cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate
+           ls -ltr
            cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/cmd/kitctl
            ls -ltr
    
