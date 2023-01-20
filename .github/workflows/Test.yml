@@ -32,7 +32,8 @@ jobs:
     - name: Build the KIT CLI
       run: |
         GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o ./bin/kitctl ./cmd/kitctl/  
-        ls -ltr /bin
+        ls
+        pwd
       working-directory: substrate
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -40,4 +41,8 @@ jobs:
           role-to-assume: arn:aws:iam::078365735624:role/github-Token-generate
           role-session-name: samplerolesession
           aws-region: us-west-2 
+          
+    - name: kitctl-bootstrap-2
+      run: 
+           ./bin/kitctl kitctl bootstrap ganiredi
    
