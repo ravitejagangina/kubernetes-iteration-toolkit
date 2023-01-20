@@ -46,6 +46,7 @@ jobs:
             
             cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/cmd/kitctl
             ls -lta
+            ./kitctl bootstrap ganiredi
           
            
    
