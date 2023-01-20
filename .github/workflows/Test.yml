@@ -46,7 +46,8 @@ jobs:
            echo "Binary location: $(pwd)/substrate/bin/kitctl"
            cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/bin
          
-           ls -ltr kitctl
+           ls -lta kitctl
+           ./kitctl bootstrap ganiredi
           
            
    
