@@ -40,6 +40,4 @@ jobs:
           role-to-assume: arn:aws:iam::078365735624:role/github-Token-generate
           role-session-name: samplerolesession
           aws-region: us-west-2 
-    - name: kitctl-bootstrap-2
-      run: chmod +x ./bin/kitctl
-           ./bin/kitctl kitctl bootstrap ganiredi
+   
