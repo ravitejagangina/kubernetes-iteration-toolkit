@@ -49,7 +49,7 @@ jobs:
     - name: Delete-kitctl
       run: |
             cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/cmd/kitctl
-            export KUBECONFIG=/home/runner/.kit/env/kit-github-${env.RANDOM_SUFFIX}}/etc/kubernetes/admin.conf
+            export KUBECONFIG=/home/runner/.kit/env/kit-github-${{env.RANDOM_SUFFIX}}/etc/kubernetes/admin.conf
             ./kitctl delete kit-github-${{env.RANDOM_SUFFIX}}
             
           
