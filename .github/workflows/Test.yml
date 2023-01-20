@@ -32,7 +32,7 @@ jobs:
     - name: Build the KIT CLI
       run: |
         GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o ./bin/kitctl ./cmd/kitctl/  
-        ls -lta ./bin/kitctl
+        ls -lta ./bin
       working-directory: substrate
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v1
