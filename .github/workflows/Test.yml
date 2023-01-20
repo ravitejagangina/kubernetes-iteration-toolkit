@@ -39,7 +39,7 @@ jobs:
       run: |
         GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o ./bin/kitctl ./cmd/kitctl/ 
         chmod +x ./bin/kitctl
-        ./kitctl bootstrap ganiredi
+        pwd
       working-directory: substrate
     - name: Print binary location
       run: |
