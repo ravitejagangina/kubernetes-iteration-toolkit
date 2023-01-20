@@ -43,7 +43,10 @@ jobs:
       working-directory: substrate
     - name: Print binary location
       run: |
-           echo "Binary location: $(pwd)./bin/kitctl"
+           echo "Binary location: $(pwd)/substrate/bin/kitctl"
+           ls -lta
+           ls -ltr
+           ls -lta kitctl
    
           
 
