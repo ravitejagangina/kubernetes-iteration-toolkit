@@ -38,6 +38,8 @@ jobs:
     - name: Build the KIT CLI
       run: |
         GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o ./bin/kitctl ./cmd/kitctl/ 
+        cd /home/runner/work/kubernetes-iteration-toolkit/kubernetes-iteration-toolkit/substrate/cmd/kitctl
+        go build -v .
         chmod +x ./bin/kitctl
         pwd
       working-directory: substrate
