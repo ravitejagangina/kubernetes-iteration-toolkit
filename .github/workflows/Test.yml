@@ -41,4 +41,4 @@ jobs:
           role-session-name: samplerolesession
           aws-region: us-west-2 
     - name: kitctl-bootstrap
-      run: ./bin/kitctl bootstrap ganirediiii
+      run: ./bin kitctl bootstrap ganirediiii
