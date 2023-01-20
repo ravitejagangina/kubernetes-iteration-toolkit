@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         os: ["darwin", "linux"]
-        arch: ["amd64"]
+        arch: ["arm64"]
     runs-on: ubuntu-latest
     permissions:
        id-token: write
